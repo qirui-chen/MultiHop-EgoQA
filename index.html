@@ -1,0 +1,427 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'Avenir Book';
+            src: url("./fonts/Avenir_Book.ttf");
+            /* File to be stored at your site */
+        }
+
+        body {
+            font-family: "Avenir Book", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 800px;
+        }
+
+        h1 {
+            font-weight: 300;
+        }
+
+        h2 {
+            font-weight: 300;
+        }
+
+        p {
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        code {
+            font-size: 0.8rem;
+            margin: 0 0.2rem;
+            padding: 0.5rem 0.8rem;
+            white-space: nowrap;
+            background: #efefef;
+            border: 1px solid #d3d3d3;
+            color: #000000;
+            border-radius: 3px;
+        }
+
+        pre>code {
+            display: block;
+            white-space: pre;
+            line-height: 1.5;
+            padding: 0;
+            margin: 0;
+        }
+
+        pre.prettyprint>code {
+            border: none;
+        }
+
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .image {
+            flex-basis: 40%
+        }
+
+        .text {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .disclaimerbox {
+            background-color: #eee;
+            border: 1px solid #eeeeee;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            padding: 20px;
+        }
+
+        video.header-vid {
+            height: 140px;
+            border: 1px solid black;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+        }
+
+        img.header-img {
+            height: 140px;
+            border: 1px solid black;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+        }
+
+        img.rounded {
+            border: 0px solid #eeeeee;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+
+        }
+
+        a:link,
+        a:visited {
+            color: #1367a7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #208799;
+        }
+
+        td.dl-link {
+            height: 160px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .layered-paper-big {
+            /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+            box-shadow:
+                0px 0px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The top layer shadow */
+                5px 5px 0 0px #fff,
+                /* The second layer */
+                5px 5px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The second layer shadow */
+                10px 10px 0 0px #fff,
+                /* The third layer */
+                10px 10px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The third layer shadow */
+                15px 15px 0 0px #fff,
+                /* The fourth layer */
+                15px 15px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The fourth layer shadow */
+                20px 20px 0 0px #fff,
+                /* The fifth layer */
+                20px 20px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The fifth layer shadow */
+                25px 25px 0 0px #fff,
+                /* The fifth layer */
+                25px 25px 1px 1px rgba(0, 0, 0, 0.35);
+            /* The fifth layer shadow */
+            margin-left: 10px;
+            margin-right: 45px;
+        }
+
+
+        .layered-paper {
+            /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+            box-shadow:
+                0px 0px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The top layer shadow */
+                5px 5px 0 0px #fff,
+                /* The second layer */
+                5px 5px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The second layer shadow */
+                10px 10px 0 0px #fff,
+                /* The third layer */
+                10px 10px 1px 1px rgba(0, 0, 0, 0.35);
+            /* The third layer shadow */
+            margin-top: 5px;
+            margin-left: 10px;
+            margin-right: 30px;
+            margin-bottom: 5px;
+        }
+
+        .vert-cent {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+    </style>
+    <title>Grounded Multi-Hop VideoQA in Long-Form Egocentric Videos </title>
+</head>
+
+<body>
+    <br>
+    <center>
+        <span style="font-size:28px">Grounded Multi-Hop VideoQA in Long-Form Egocentric Videos</span><br><br><br>
+    </center>
+    <table align="center">
+        <tbody>
+            <tr>
+                <td align="center" width="200px">
+                    <center>
+                        <span style="font-size:16px">Qirui Chen<sup>1</sup></span>
+                    </center>
+                </td>
+                <td align="center" width="200px">
+                    <center>
+                        <span style="font-size:16px"><a href="https://dszdsz.cn/">Shangzhe Di</a><sup>1</sup></span>
+                    </center>
+                </td>
+                <td align="center" width="200px">
+                    <center>
+                        <span style="font-size:16px"><a href="https://weidixie.github.io/">Weidi
+                                Xie</a><sup>1,2</sup></span>
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table><br>
+
+    <table align="center" width="700px">
+        <tbody>
+            <tr>
+                <td align="center" width="600px">
+                    <span style="font-size:16px"><sup>1</sup>Coop. Medianet Innovation Center, Shanghai Jiao Tong
+                        University</span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" width="600px">
+                    <center>
+                        <span style="font-size:16px"><sup>2</sup>Shanghai AI Laboratory, China</span>
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <table align="center" width="600px">
+        <tbody>
+            <tr>
+                <td align="center" width="200px">
+                    <center>
+                        <br>
+                        <span style="font-size:20px">Code
+                            <a href=""> [GitHub]</a>
+                        </span>
+                    </center>
+                </td>
+
+                <td align="center" width="200px">
+                    <center>
+                        <br>
+                        <span style="font-size:20px">Paper
+                            <a href=""> [arXiv]</a>
+                        </span>
+                    </center>
+                </td>
+
+                <td align="center" width="200px">
+                    <center>
+                        <br>
+                        <span style="font-size:20px">Cite
+                            <a href="./bibtex.txt"> [BibTeX]</a>
+                        </span>
+                    </center>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <hr>
+    <center>
+        <h2> Abstract </h2>
+    </center>
+    <p style="text-align:justify; text-justify:inter-ideograph;">
+        <left>
+            This paper considers the problem of <em>Multi-Hop Video Question Answering (<u>MH-VidQA</u>)</em> in
+            long-form
+            egocentric
+            videos. This task not only requires to answer visual questions, but also to localize multiple relevant time
+            intervals within the video as visual evidences. We develop an automated pipeline to mine multi-hop
+            question-answering pairs with associated temporal evidence, enabling to construct a large-scale dataset for
+            instruction-tuning. To monitor the progress of this new task, we further curate a high-quality benchmark,
+            <b><u>MultiHop-EgoQA</u></b>, through meticulous manual verification and refinement. Our experiments reveal
+            that
+            existing
+            multi-modal systems exhibit inadequate multi-hop grounding and reasoning abilities, resulting in
+            unsatisfactory performance. We then propose a novel architecture, termed as <b><u>GeLM</u></b>, to leverage
+            the
+            world
+            knowledge reasoning capabilities of multi-modal large language models (LLMs), while incorporating a
+            grounding module to retrieve temporal evidence in the video with flexible grounding tokens. Once trained on
+            our constructed visual instruction data, <b>GeLM</b> demonstrates enhanced multi-hop grounding and reasoning
+            capabilities, establishing a new baseline for this challenging task. Furthermore, when trained on third-view
+            videos, the same architecture also achieves state-of-the-art performance on the existing single-hop VidQA
+            benchmark, ActivityNet-RTL, showing the architecture's effectiveness.
+        </left>
+    </p>
+
+
+    <br>
+    <hr>
+    <center>
+        <h2> <b>Problem Background</b></h2>
+    </center>
+    <p style="text-align:justify; text-justify:inter-ideograph;">
+    <p>
+    <div style="text-align: center; margin-top: 20px;">
+        <img class="left" src="./resources/teaser2.jpeg" width="550px" style="margin-top: 10px;">
+    </div>
+    </p>
+    <p>
+        <left>
+            <br>
+            <b>In the existing literature, video question-answering tasks for egocentric videos typically assume
+                relevance to a single time interval, thus limiting their applicability in understanding complex
+                questions that necessitate reasoning across multiple time spans in a video. To bridge the gap, this
+                paper introduces the problem of <u>Multi-Hop Video Question-Answering</u> (<em>MH-VidQA</em>). As
+                illustrated
+                in the figure, this task requires the model to simultaneously answer questions that involve
+                visual information from multiple time intervals and localize these time spans as evidence within long,
+                egocentric videos.
+        </left>
+    </p>
+    <br>
+
+
+    <br>
+    <hr>
+    <center>
+        <h2> <b>MultiHop-EgoQA</b>: Data Curation Pipeline </h2>
+    </center>
+    <p style="text-align:justify; text-justify:inter-ideograph;">
+    <p>
+    <div style="text-align: center; margin-top: 25px;">
+        <img class="left" src="./resources/curation.jpeg" width="800px">
+    </div>
+    </p>
+    <p>
+        <left>
+            <br>
+            <b>Illustration of our data curation pipeline.</b> To collect large-scale Multi-Hop VidQA data, we have
+            developed an automated pipeline. We begin by using action scene graphs to identify potential multi-hop
+            reasoning questions based on the syntax trees of annotated narrations. Next, we use GPT-4o to generate data
+            samples that include questions, answers, and relevant time spans. Finally, we perform manual validation and
+            refinement to create the new benchmark.
+        </left>
+    </p>
+
+    <br>
+    <br>
+    <hr>
+    <center>
+        <h2> <b>GeLM</b>: A Baseline Method for <em>MH-VidQA</em> </h2>
+    </center>
+    <p style="text-align:justify; text-justify:inter-ideograph;">
+    <p>
+        <left>
+            Existing models for video question answering typically provide answers without supporting temporal evidence,
+            or are restricted to identifying a single time interval.
+            Here, we propose a novel architecture, termed as <b>GeLM</b>: <b><u>G</u></b>rounding Scattered
+            <b><u>E</u></b>vidence with Large <b><u>L</u></b>anguage <b><u>M</u></b>odel for Multi-Hop Video
+            Question-Answering. As
+            depicted in the figure,
+            our model primarily comprises a multi-modal large language model and a grounding module, with special
+            grounding tokens indicating the time span of the enclosed key information in the
+            response. To ground the time spans that support the answer,
+            we design an evidence grounding module that processes a variable number of grounding queries and predicts
+            the corresponding temporal proposals in the video.
+        </left>
+    </p>
+    <p><img class="left" src="./resources/architecture_v3.jpeg" width="800px" style="margin-top: 20px;"></p>
+    <br>
+    <br>
+    <hr>
+    <center>
+        <h2>Results</h2>
+    </center>
+    <p>
+        We evaluate several latest multi-modal models on <strong><small>DATASETNAME</small></strong>, exploring their
+        abilities of
+        multi-hop reasoning and temporal grounding.
+    </p>
+    <p>From experiments presented in the following table, we can draw the following observations:</p>
+
+    <ol style="list-style-type: decimal; margin-left: 20px;">
+        <li style="margin-bottom: 10px;">
+            <em>Both the proprietary model and open-source multi-modal LLMs significantly lag behind human
+                performance</em>,
+            underscoring the current limitations in multi-hop reasoning and grounding capabilities within multi-modal
+            systems.
+        </li>
+        <li style="margin-bottom: 10px;">
+            <em>Reasoning and grounding abilities are disentangled in existing visual systems.</em> For instance,
+            LLaVA-NeXT-Video is unable to handle requests involving temporal grounding, but can still answer part of
+            questions that do not involve temporal grounding.
+        </li>
+        <li style="margin-bottom: 10px;">
+            <em>Instruction-tuning with single-hop data does not guarantee superiority in multi-hop grounding.</em> For
+            example, despite TimeChat and VTimeLLM having been fine-tuned with temporally aware instructions and
+            multi-turn conversations, the ability to ground multiple intervals for a single query remains limited.
+        </li>
+        <li style="margin-bottom: 10px;">
+            <em>Dense captions do indeed help temporal grounding, but errors may cascade.</em> Although captioning at
+            per second provides explicit temporal information for grounding, errors in the captioning process are
+            difficult to correct through the subsequent stages.
+        </li>
+    </ol>
+    <center>
+        <p><img class="center" src="./resources/results.png" width="750px"
+                style="margin-top: 10px; margin-bottom: 10px"></p>
+    </center>
+    <p>
+        Overall, we have established a new baseline method for this benchmark, outperforming current systems and
+        explicitly supporting scattered evidence grounding.
+    </p>
+    <br>
+    <hr>
+    <center>
+        <h2> Acknowledgements </h2>
+    </center>
+    <p>
+        Based on a template by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a
+            href="http://richzhang.github.io/">Richard Zhang</a>.
+    </p>
+    <br>
+</body>
+
+</html>
