@@ -1,7 +1,9 @@
 # Grounded Multi-Hop VideoQA in Long-Form Egocentric Videos
 
 
-[[Project page]]() [[Paper]]()
+[🏡 Project Page]() |  [📄 Paper]() | [🤗 Dataset](https://huggingface.co/datasets/SurplusDeficit/MultiHop-EgoQA)
+
+
 
 
 ## TODO
