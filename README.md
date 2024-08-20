@@ -10,7 +10,7 @@
 This paper considers the problem of <em>Multi-Hop Video Question Answering (<u>MH-VidQA</u>)</em> in long-form egocentric videos. This task not only requires to answer visual questions, but also to localize multiple relevant time intervals within the video as visual evidences.
 
 <div align="center">
-   <img src="./assets/teaser2.jpeg" style="width: 80%;">
+   <img src="./assets/teaser2.jpeg" style="width: 50%;">
 </div>
 
 ### Baseline Method
@@ -18,7 +18,7 @@ This paper considers the problem of <em>Multi-Hop Video Question Answering (<u>M
 We develop an automated pipeline to mine multi-hop question-answering pairs with associated temporal evidence, enabling to construct a large-scale dataset for instruction-tuning. We then propose a novel architecture, termed as <b><u>GeLM</u></b>, to leverage the world knowledge reasoning capabilities of multi-modal large language models (LLMs), while incorporating a grounding module to retrieve temporal evidence in the video with flexible grounding tokens.
 
 <div align="center">
-   <img src="./assets/architecture_v3.jpeg" style="width: 100%;">
+   <img src="./assets/architecture_v3.jpeg" style="width: 80%;">
 </div>
 
 
