@@ -22,13 +22,101 @@ We develop an automated pipeline to mine multi-hop question-answering pairs with
 </div>
 
 
-## TODO
 
-- [ ] Release the annotation file
-- [ ] Release codes of the evaluation
-- [ ] Release codes of the baseline method
-- [ ] Release automatically constructed data
-- [ ] Release visual features
+## 📂 Directory Structure
+
+```bash
+MultiHop-EgoQA/            
+├── baseline/                       # Our Baseline Method
+│   ├── checkpoints/                # Checkpoints of LLMs
+│   │   ├──vicuna-v1-3-7b/
+│   ├── datasets/                   # Save path of datasets
+│   │   ├── multihop_qa/        
+│   │   │   ├── features/     
+│   │   │   ├── train_annotations.json
+│   │   ├── activitynet-captions/     
+│   │   │   ├── intern_feature/
+│   │   │   ├── val_1.json
+│   │   ├── temporal_reasoning/     
+│   ├── gelm/                       # Implementation of the GeLM model
+│   ├── llava/                      # LLaVa code base
+│   ├── scripts/                    # Scripts for evaluating the baseline method
+│   │   ├── eval_multihop_qa.sh     # Evaluate GeLM on MultiHop-EgoQA
+│   │   └── eval_rtl.sh             # Evaluate GeLM on ActivityNet-RTL
+│   └── pyproject.toml              # Configuration file
+|
+├── benchmark/                      # Benchmarking tools and metrics
+│   ├── metrics/                    # Metrics calculation
+│   └── zero-shot-inference/        # Zero-shot inference codes
+```
+
+
+## Datasets
+See [Dataset Preparation](baseline/datasets/DATASET.md).
+
+
+
+## Baseline Method
+
+> Training setup: Ubuntu 18.04, CUDA 12.1, 4x Nvidia H800 (80GB)
+
+
+### Training
+
+1. Installing the environment.
+
+```bash
+cd baseline
+
+conda create -n gelm python=3.10 -y
+conda activate gelm
+
+pip install --upgrade pip  # enable PEP 660 support
+pip install -e .
+
+pip install ninja
+pip install flash-attn --no-build-isolation
+```
+
+2. Downloading LLM checkpoints and saving under `checkpoints`.
+```bash
+git clone https://huggingface.co/lmsys/vicuna-13b-v1.3
+```
+
+
+3. Training.
+```bash
+# Training on MultiHop-EgoQA
+bash scripts/finetune_multihop_qa.sh
+
+# Training on ActivityNet-RTL
+bash scripts/finetune_rtl.sh
+
+# Training on both MultiHop-EgoQA and ActivityNet-RTL
+bash scripts/finetune_mixed.sh
+```
+
+
+### Checkpoints
+
+We provide the checkpoints of GeLM-7B trained on MultiHop-EgoQA and ActivityNet-RTL on [Hugging face](), respectively.
+
+
+### Evaluation
+
+1. Evaluation on MultiHop-EgoQA
+
+```bash
+cd benchmark/metrics
+bash evaluate.sh
+```
+
+2. Evaluation on ActivityNet-RTL
+
+```bash
+cd baseline
+bash eval_rtl.sh
+```
 
 
 ## 🫡 Acknowledgements

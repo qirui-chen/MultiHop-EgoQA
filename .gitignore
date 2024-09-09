@@ -1,1 +1,40 @@
 .DS_Store
+
+# Python
+__pycache__
+*.pyc
+*.egg-info
+dist
+
+# Log
+*.log
+*.log.*
+*.json
+*.jsonl
+
+# Data
+!**/alpaca-data-conversation.json
+
+# Editor
+.idea
+*.swp
+
+# Other
+.DS_Store
+wandb
+output
+
+checkpoints
+ckpts*
+
+.ipynb_checkpoints
+*.ipynb
+
+baseline/datasets/
+baseline/finetuned/
+baseline/checkpoints/
+baseline/outputs/
+baseline/wandb/
+benchmark/metrics/predictions/
+benchmark/metrics/results/
+benchmark/metrics/MultiHop-EgoQA.json
