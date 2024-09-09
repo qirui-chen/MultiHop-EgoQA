@@ -99,7 +99,7 @@ bash scripts/finetune_mixed.sh
 
 ### Checkpoints
 
-We provide the checkpoints of GeLM-7B trained on MultiHop-EgoQA and ActivityNet-RTL on [Hugging face](), respectively.
+We provide the checkpoints of GeLM-7B trained on MultiHop-EgoQA and ActivityNet-RTL on [Hugging face](https://huggingface.co/SurplusDeficit/GeLM), respectively.
 
 
 ### Evaluation
