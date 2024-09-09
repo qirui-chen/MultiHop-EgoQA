@@ -1,6 +1,6 @@
 # Grounded Multi-Hop VideoQA in Long-Form Egocentric Videos
 
-[🏡 Project Page](https://qirui-chen.github.io/MultiHop-EgoQA) |  [📄 Paper](https://arxiv.org/abs/2408.14469) | [🤗 Dataset](https://huggingface.co/datasets/SurplusDeficit/MultiHop-EgoQA)
+[🏡 Project Page](https://qirui-chen.github.io/MultiHop-EgoQA) |  [📄 Paper](https://arxiv.org/abs/2408.14469) | [🤗 Dataset](https://huggingface.co/datasets/SurplusDeficit/MultiHop-EgoQA) | [🤗 Checkpoints](https://huggingface.co/SurplusDeficit/GeLM)
 
 
 
