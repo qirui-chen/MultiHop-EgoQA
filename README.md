@@ -1,6 +1,6 @@
 # Grounded Multi-Hop VideoQA in Long-Form Egocentric Videos
 
-[🏡 Project Page](https://qirui-chen.github.io/MultiHop-EgoQA) |  [📄 Paper](https://arxiv.org/abs/2408.14469) | [🤗 Dataset](https://huggingface.co/datasets/SurplusDeficit/MultiHop-EgoQA)
+[🏡 Project Page](https://qirui-chen.github.io/MultiHop-EgoQA) |  [📄 Paper](https://arxiv.org/abs/2408.14469) | [🤗 Dataset](https://huggingface.co/datasets/SurplusDeficit/MultiHop-EgoQA) | [🤗 Checkpoints](https://huggingface.co/SurplusDeficit/GeLM)
 
 
 
@@ -99,7 +99,7 @@ bash scripts/finetune_mixed.sh
 
 ### Checkpoints
 
-We provide the checkpoints of GeLM-7B trained on MultiHop-EgoQA and ActivityNet-RTL on [Hugging face](), respectively.
+We provide the checkpoints of GeLM-7B trained on MultiHop-EgoQA and ActivityNet-RTL on [Hugging face](https://huggingface.co/SurplusDeficit/GeLM), respectively.
 
 
 ### Evaluation
