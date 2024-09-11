@@ -18,3 +18,8 @@
 - We provide InternVideo visual features of the ActivityNet in the same repo from [Hugging Face](https://huggingface.co/datasets/SurplusDeficit/MultiHop-EgoQA).
 
 - After downloading, put the features under `baseline/datasets/activitynet-captions/intern_feature`.
+
+
+## Feature Extraction
+
+We use [InternVideo-MM-L14](https://github.com/OpenGVLab/InternVideo) for feature extraction and utilize the script [here](https://github.com/TengdaHan/TemporalAlignNet/tree/main/htm_zoo#visual-features).
