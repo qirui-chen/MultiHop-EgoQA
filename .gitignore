@@ -31,6 +31,7 @@ ckpts*
 *.ipynb
 
 baseline/datasets/
+!baseline/datasets/.DATASET.md
 baseline/finetuned/
 baseline/checkpoints/
 baseline/outputs/
