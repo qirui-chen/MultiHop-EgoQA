@@ -119,6 +119,24 @@ bash eval_rtl.sh
 ```
 
 
+## Citation
+
+If you find this paper or repo helpful, you can use the following format to cite:
+```bibtex
+@inproceedings{chen2025grounded,
+  title={Grounded multi-hop videoqa in long-form egocentric videos},
+  author={Chen, Qirui and Di, Shangzhe and Xie, Weidi},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={2},
+  pages={2159--2167},
+  year={2025}
+}
+```
+
+
+
+
 ## 🫡 Acknowledgements
 
 - Our baseline method implementation is adapted from the [LITA](https://github.com/NVlabs/LITA).
